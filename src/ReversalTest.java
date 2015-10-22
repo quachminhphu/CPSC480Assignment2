@@ -4,6 +4,9 @@ import org.junit.Test;
 
 
 
+
+
+
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,10 +20,16 @@ public class ReversalTest {
 	private static final String OUTPUT = "output.txt";
 	
 	@Test
+	public void testReversal() {
+		Reversal myReversal = new Reversal();
+		boolean isReversalClass = (myReversal.getClass()==Reversal.class);
+		assertTrue(isReversalClass);
+	}
+	@Test
 	public void testInputFileEmpty() {
 		try {
 			File inputFile  = new File( INPUT  );
-			File outputFile = new File( OUTPUT );
+			File outputFile = new File( OUTPUT ); 
 			
 			// If assert fails it is (usually) because the file was (wrongly) left open in an earlier run.  
 			// Using a file manager application (e.g. explorer), go to project directory and delete it.
@@ -128,8 +137,9 @@ public class ReversalTest {
 			input.println( "zebra ect." );
 			input.println( "kitet itchyyyy" );
 			input.println( "kappa" );
+			input.println( " ");
 			input.println( "River is long" );
-			input.println( "" );
+			input.println( "  " );
 			input.close();
 
 			// invoke program

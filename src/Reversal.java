@@ -26,7 +26,10 @@ public class Reversal {
 			//Scan every word in the line 
 			while (lineProcessor.hasNext()){
 				String word = lineProcessor.next();
-				container.push(word);
+				
+			 container.push(word);
+				
+				
 			}
 			//finish a line 
 			lineProcessor.close();
@@ -49,6 +52,7 @@ public class Reversal {
 		String mynull ="\0";
 		
 		
+		
 		while (!Container.isEmpty()){
 			temp = Container.pop();
 			
@@ -59,9 +63,6 @@ public class Reversal {
 					printer.println(line);
 					line ="";
 				}
-			}else if( temp.equals(" ")){
-				continue;
-			
 			}else {
 				if(line.isEmpty()){
 					line = line + temp;
