@@ -30,6 +30,7 @@ public class ReversalTest {
 			}
 			if (outputFile.exists()) {
 				assertTrue( "Your program left \""+OUTPUT+"\" open in a previous test.", outputFile.delete() );
+			
 			}
 			
 			// create INPUT file

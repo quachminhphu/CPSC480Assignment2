@@ -61,6 +61,7 @@ public class Reversal {
 				}
 			}else if( temp.equals(" ")){
 				continue;
+			
 			}else {
 				if(line.isEmpty()){
 					line = line + temp;
