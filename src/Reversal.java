@@ -11,6 +11,9 @@ public class Reversal {
 	/*
 	 * This method receives input file and put word in container 
 	 */
+	
+	
+	
 	public static void readFile (File input ,Stack<String> container) throws FileNotFoundException{
 		Scanner reader = new Scanner(input);
 		while (reader.hasNextLine()){
@@ -38,12 +41,13 @@ public class Reversal {
 	/*
 	 * This method receives container and write it into file in reverse order 
 	 */
-	public static void writeFile (File output, Stack<String> Container){
-		try {
+	public static void writeFile (File output, Stack<String> Container) throws FileNotFoundException{
+		
 		PrintWriter printer = new PrintWriter(output);
 		String line="";
 		String temp ="";
 		String mynull ="\0";
+		
 		
 		while (!Container.isEmpty()){
 			temp = Container.pop();
@@ -69,9 +73,7 @@ public class Reversal {
 		}
 		printer.close();
 		
-		}catch(IOException ex){
-			
-		}
+		
 	}
 	
 	/*
